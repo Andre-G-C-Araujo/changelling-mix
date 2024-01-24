@@ -1,0 +1,402 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+}
+
+:root {
+  --bg-color: #5158bb;
+  --color-gray: #343a40;
+  --color-blue: #0a3871;
+
+  --bg-color-darkblue: #043565;
+  --text-color: #0cd5ec;
+
+  -body-mb-size: 330px;
+  -header-mb-margin-bot: 56px;
+}
+
+@media (min-width: 769px) {
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: var(--bg-color);
+  }
+  header {
+    background-color: var(--bg-color-darkblue);
+    display: flex;
+    margin-bottom: 56px;
+    height: 126px;
+    width: 100%;
+
+    > svg {
+      width: 70px;
+      height: 70px;
+      margin: 24px;
+    }
+    > h2 {
+      margin: auto;
+      font-size: 75px;
+      color: var(--text-color);
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: 300px;
+    padding: 5px 10px;
+    color: var(--text-color);
+    font-size: 95px;
+
+    background-color: transparent;
+    border: 3px dashed var(--bg-color-darkblue);
+    border-radius: 5px;
+  }
+  textarea::placeholder {
+    padding: 5px;
+    color: var(--text-color);
+    font-size: 55px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  div {
+    margin: 8px 0;
+  }
+
+  span {
+    font-size: 12px;
+    color: var(--color-gray);
+  }
+
+  button {
+    margin: 8px 5rem;
+    width: 480px;
+    padding: 18px 0;
+    border-radius: 24px;
+    border: 2px solid var(--color-blue);
+    color: var(--color-blue);
+  }
+
+  .btn-unmix {
+    margin-bottom: 30px;
+  }
+
+  .btn-mix {
+    color: white;
+    background-color: var(--color-blue);
+  }
+  .btn-copy {
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  section {
+    width: 100%;
+    height: 300px;
+    border-radius: 24px;
+    padding: 32px;
+    background-color: #fff;
+
+    > h2,
+    p {
+      text-align: center;
+    }
+
+    > h2 {
+      color: #343a40;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    > p {
+      color: #495057;
+      font-size: 16px;
+    }
+  }
+
+  footer {
+    width: 100%;
+    margin-top: 20px;
+    height: 90px;
+    background-color: var(--bg-color-darkblue);
+    color: var(--text-color);
+    padding: 15px;
+    text-align: center;
+
+    > p {
+      margin: 3px 0;
+      font-size: 13px;
+
+      > strong {
+        color: white;
+      }
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: var(--bg-color);
+  }
+  header {
+    background-color: var(--bg-color-darkblue);
+    display: flex;
+    margin-bottom: 56px;
+    height: 96px;
+    width: 100%;
+
+    > svg {
+      margin: 24px -50px 24px 16px;
+    }
+    > h2 {
+      margin: auto;
+      font-size: 35px;
+      color: var(--text-color);
+    }
+  }
+
+  textarea {
+    width: 630px;
+    height: 400px;
+    margin: 0 30px;
+    padding: 5px 10px;
+    color: var(--text-color);
+
+    font-size: 35px;
+
+    background-color: transparent;
+    border: 2px dashed var(--bg-color-darkblue);
+    border-radius: 5px;
+  }
+  textarea::placeholder {
+    padding: 5px;
+    color: var(--text-color);
+    font-size: 55px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  div {
+    margin: 8px 34px;
+  }
+
+  span {
+    font-size: 12px;
+    color: var(--color-gray);
+  }
+
+  button {
+    margin: 8px 30px;
+    width: 280px;
+    padding: 18px 0;
+    border-radius: 24px;
+    border: 2px solid var(--color-blue);
+    color: var(--color-blue);
+  }
+
+  .btn-unmix {
+    margin-bottom: 30px;
+  }
+
+  .btn-mix {
+    color: white;
+    background-color: var(--color-blue);
+  }
+  .btn-copy {
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  section {
+    width: 630px;
+    border-radius: 24px;
+    padding: 32px;
+    background-color: #fff;
+    margin: 0 30px;
+
+    > h2,
+    p {
+      text-align: center;
+    }
+
+    > h2 {
+      color: #343a40;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    > p {
+      color: #495057;
+      font-size: 16px;
+    }
+  }
+
+  footer {
+    margin-top: 20px;
+    height: 90px;
+    background-color: var(--bg-color-darkblue);
+    color: var(--text-color);
+    padding: 15px;
+    text-align: center;
+
+    > p {
+      margin: 3px 0;
+      font-size: 13px;
+
+      > strong {
+        color: white;
+      }
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+/* Mobile 375 px ou -(Conforme tamanho do figma)*/
+@media (max-width: 375px) {
+  body {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    background-color: var(--bg-color);
+  }
+  header {
+    background-color: var(--bg-color-darkblue);
+    display: flex;
+    margin-bottom: 56px;
+    height: 96px;
+    width: 100%;
+
+    > svg {
+      margin: 24px -50px 24px 16px;
+    }
+    > h2 {
+      margin: auto;
+      font-size: 25px;
+      color: var(--text-color);
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    color: var(--text-color);
+
+    font-size: 20px;
+
+    background-color: transparent;
+    border: 2px dashed var(--bg-color-darkblue);
+    border-radius: 5px;
+  }
+  textarea::placeholder {
+    padding: 5px;
+    color: var(--text-color);
+    font-size: 18px;
+    text-align: center;
+  }
+  div {
+    margin: 8px 24px;
+  }
+
+  span {
+    font-size: 12px;
+    color: var(--color-gray);
+  }
+
+  button {
+    margin: 8px 30px;
+    width: 280px;
+    padding: 18px 0;
+    border-radius: 24px;
+    border: 2px solid var(--color-blue);
+    color: var(--color-blue);
+  }
+
+  .btn-unmix {
+    margin-bottom: 30px;
+  }
+
+  .btn-mix {
+    color: white;
+    background-color: var(--color-blue);
+  }
+  .btn-copy {
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  section {
+    width: 280px;
+    border-radius: 24px;
+    padding: 32px;
+    background-color: #fff;
+    margin: 0 30px;
+
+    > h2,
+    p {
+      text-align: center;
+    }
+
+    > h2 {
+      color: #343a40;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    > p {
+      color: #495057;
+      font-size: 16px;
+    }
+  }
+
+  footer {
+    margin-top: 20px;
+    height: 90px;
+    background-color: var(--bg-color-darkblue);
+    color: var(--text-color);
+    padding: 15px;
+    text-align: center;
+
+    > p {
+      margin: 3px 0;
+      font-size: 13px;
+
+      > strong {
+        color: white;
+      }
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
